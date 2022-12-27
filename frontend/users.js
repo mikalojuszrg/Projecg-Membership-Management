@@ -2,90 +2,49 @@ const userForm = document.querySelector("#userForm");
 const membershipForm = document.querySelector("#membershipForm");
 const membershipSelect = document.querySelector("#membership");
 const mainSection = document.querySelector("#section--main");
-const serviceId = membershipSelect.value;
+const cardsSection = document.querySelector("#memberships--cards");
+const sortBtn = document.querySelector("#button--sort");
 
-const postUser = () => {
-  // const serviceId = membershipSelect.value;
-
-  fetch(`http://localhost:3000/users`, {
-    method: `POST`,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: userForm[0].value,
-      surname: userForm[1].value,
-      email: userForm[2].value,
-      service_id: serviceId,
-    }),
-  }).then((response) => {
-    if (response.ok) {
-      console.log(response.json());
-      return response.json();
-    }
-  });
-};
-
-const postMembership = () => {
-  fetch(`http://localhost:3000/memberships`, {
-    method: `POST`,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: membershipForm[0].value,
-      price: membershipForm[1].value,
-      description: membershipForm[2].value,
-    }),
-  }).then((response) => {
-    if (response.ok) {
-      console.log(response.json());
-      const newMembership = document.createElement("option");
-      newMembership.value = membershipForm[0].value;
-      newMembership.textContent = membershipForm[0].value;
-      membershipSelect.appendChild(newMembership);
-    }
-  });
-};
-
-const getMemberships = () => {
-  fetch("http://localhost:3000/memberships")
+const getUsersAsc = () => {
+  fetch("http://localhost:3000/users/asc")
     .then((resp) => resp.json())
     .then((response) => {
-      renderMembershipCards(response);
+      console.log(response);
+      renderUserCards(response);
     });
 };
 
-// getMemberships();
-
-const renderOptions = (options) => {
-  options.forEach((option) => {
-    const newOption = document.createElement("option");
-    newOption.value = option._id;
-    newOption.textContent = option.name;
-    membershipSelect.appendChild(newOption);
-  });
-};
-
-const getOptions = () => {
-  fetch("http://localhost:3000/memberships")
+const getUsersDsc = () => {
+  fetch("http://localhost:3000/users/desc")
     .then((resp) => resp.json())
     .then((response) => {
-      renderOptions(response);
+      console.log(response);
+      renderUserCards(response);
     });
 };
 
-getMemberships();
+getUsersAsc();
 
-window.addEventListener("load", getOptions);
-
-userForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  postUser();
+sortBtn.addEventListener("click", () => {
+  cardsSection.innerHTML = "";
+  getUsersDsc();
 });
 
-const renderMembershipCards = (cards) => {
+const renderUserCards = (cards) => {
   cards.forEach((card) => {
     console.log(card);
+    const cardDiv = document.createElement("div");
+    const cardName = document.createElement("h2");
+    const cardEmail = document.createElement("p");
+    const cardMembership = document.createElement("p");
+
+    cardName.textContent = `${card.name} ${card.surname}`;
+    cardEmail.textContent = card.email;
+    cardMembership.textContent = card.plans[0].name;
+
+    cardDiv.appendChild(cardName);
+    cardDiv.appendChild(cardEmail);
+    cardDiv.appendChild(cardMembership);
+    cardsSection.append(cardDiv);
   });
 };
