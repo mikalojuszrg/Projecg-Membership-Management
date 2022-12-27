@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script defer src="memberships.js"></script> -->
+    <script defer src="membershipsForm.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="#" />
+    <title>Memberships</title>
+  </head>
+  <body>
+    <header>
+      <!-- <button
+        id="memberships--button"
+        onclick="location.href='memberships.html'"
+        type="button"
+      >
+        Memberships
+      </button>
+      <button onclick="location.href='users.html'" type="button">Users</button> -->
+    </header>
+    <main>
+      <section id="memberships--introduction">
+        <div class="memberships--introduction--text">
+          <h1 id="memberships--title">Create Membership</h1>
+        </div>
+        <div class="section--main"></div>
+        <button id="newMemberships--button" type="button">
+          + New Membership
+        </button>
+      </section>
+
+      <section id="memberships--cards"></section>
+
+      <section id="memberships--form">
+        <form id="membershipForm" type="submit">
+          <div>
+            <label for="name"><strong>Name</strong></label>
+            <input
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="price"><strong>Membership price</strong></label>
+            <input
+              name="price"
+              id="price"
+              type="number"
+              placeholder="$ Membership Price"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="description"><strong>Description</strong></label>
+            <textarea
+              name="description"
+              id="description"
+              type="text"
+              required
+            ></textarea>
+          </div>
+          <div class="button--div">
+            <button id="cancel--button" type="submit">Cancel</button>
+            <button id="create--button" type="submit">New Membership</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

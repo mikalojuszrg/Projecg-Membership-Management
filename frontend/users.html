@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="users.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Users</title>
+  </head>
+  <body>
+    <!-- <header>
+      <button onclick="location.href='memberships.html'" type="button">
+        Memberships
+      </button>
+      <button onclick="location.href='users.html'" type="button">Users</button>
+    </header>
+    <section id="memberships">
+      <div class="section--header">
+        <h1>Membership Management</h1>
+        <p>
+          Here you can maanage your membership packages. Note: Make sure you are
+          not deleting or deactiving packages assigned to active users.
+        </p>
+      </div>
+      <div class="section--main"></div>
+    </section> -->
+
+    <header>
+      <button
+        id="memberships--button"
+        onclick="location.href='memberships.html'"
+        type="button"
+      >
+        Memberships
+      </button>
+      <button onclick="location.href='users.html'" type="button">Users</button>
+    </header>
+    <main>
+      <section id="memberships--introduction">
+        <div class="memberships--introduction--text">
+          <h1 id="memberships--title">User Management</h1>
+        </div>
+        <div class="section--main"></div>
+        <button
+          onclick="location.href='usersForm.html'"
+          id="newMemberships--button"
+          type="button"
+        >
+          + New User
+        </button>
+      </section>
+
+      <section id="memberships--cards"></section>
+    <footer></footer>
+
+    <!-- <form id="userForm" type="submit">
+      <label for="firstName">First Name</label>
+      <input name="firstName" id="firstName" type="text" required />
+
+      <label for="lastName">Last Name</label>
+      <input name="lastName" id="lastName" type="text" required />
+
+      <label for="email">Email</label>
+      <input name="email" id="email" type="email" required />
+
+      <label for="membership">First Name</label>
+      <select name="membership" id="membership"></select>
+
+      <button type="submit">New User</button>
+    </form> -->
+  </body>
+</html>

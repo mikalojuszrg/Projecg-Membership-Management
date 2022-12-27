@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+body header {
+  margin: 1rem 0rem 1rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+body header button {
+  border: none;
+  background-color: transparent;
+}
+body header #memberships--button {
+  color: rgb(85, 100, 200);
+  cursor: pointer;
+}
+body header #memberships--button:hover {
+  color: rgb(57, 70, 154);
+}
+body main {
+  padding: 2rem 10rem 1rem 10rem;
+  height: 80vh;
+  background-color: rgb(192, 212, 234);
+}
+@media screen and (max-width: 768px) {
+  body main {
+    padding: 0;
+  }
+}
+body main #memberships--introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  color: rgb(59, 58, 58);
+  margin-bottom: 2rem;
+}
+body main #memberships--introduction .memberships--introduction--text h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+body main #memberships--introduction .memberships--introduction--text p {
+  font-size: 0.8rem;
+}
+body main #memberships--introduction button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 0.7rem;
+  border: none;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  color: white;
+  background-color: rgb(85, 100, 200);
+  cursor: pointer;
+}
+body main #memberships--introduction button:hover {
+  background-color: rgb(38, 56, 172);
+}
+body main #memberships--cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  text-align: center;
+}
+body main #memberships--cards div {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  padding: 1rem;
+  border: 1px solid rgb(201, 201, 201);
+  background-color: white;
+}
+body main #memberships--cards div h2 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+body main #memberships--cards div p {
+  font-size: 0.7rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+body main #memberships--cards div button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  align-self: flex-end;
+  background-color: rgb(251, 209, 209);
+  color: rgb(240, 95, 95);
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+body main #memberships--cards div button:hover {
+  background-color: rgb(244, 164, 164);
+}
+body main #memberships--form {
+  font-size: 0.8rem;
+}
+body main #memberships--form #membershipForm {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  body main #memberships--form #membershipForm {
+    margin: 0;
+  }
+}
+body main #memberships--form #membershipForm > div {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+body main #memberships--form #membershipForm label {
+  width: 200px;
+  text-align: right;
+}
+body main #memberships--form #membershipForm input {
+  margin-left: 2rem;
+  width: 100%;
+  border: 1px solid rgb(201, 201, 201);
+  padding: 0.7rem 5rem 0.7rem 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+body main #memberships--form #membershipForm textarea {
+  padding: 0.7rem 4rem 0.7rem 0.7rem;
+  margin-left: 2rem;
+  width: 100%;
+  height: 10rem;
+  border: 1px solid rgb(201, 201, 201);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+body main #memberships--form .button--div {
+  display: flex;
+  gap: 2rem;
+  padding-left: 13rem;
+}
+body main #memberships--form .button--div button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+body main #memberships--form .button--div #create--button {
+  background-color: rgb(85, 100, 200);
+  color: white;
+}
+body main #memberships--form .button--div #create--button:hover {
+  background-color: rgb(38, 56, 172);
+}
+body main #users--form {
+  font-size: 0.8rem;
+}
+body main #users--form #userForm {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  body main #users--form #userForm {
+    margin: 0;
+  }
+}
+body main #users--form #userForm > .input--div {
+  display: flex;
+  flex-direction: column;
+}
+body main #users--form #userForm input {
+  width: 50%;
+  border: 1px solid rgb(201, 201, 201);
+  padding: 0.7rem 5rem 0.7rem 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+body main #users--form #userForm select {
+  padding: 0.7rem 4rem 0.7rem 0.7rem;
+  width: 50%;
+  border: 1px solid rgb(201, 201, 201);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+body main #users--form .button--div {
+  margin: 0 auto;
+}
+body main #users--form .button--div button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+body main #users--form .button--div #create--button {
+  background-color: rgb(85, 100, 200);
+  color: white;
+}
+body main #users--form .button--div #create--button:hover {
+  background-color: rgb(38, 56, 172);
+}/*# sourceMappingURL=styles.css.map */
