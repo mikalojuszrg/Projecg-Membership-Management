@@ -34,4 +34,7 @@ const postMembership = () => {
 membershipForm.addEventListener("submit", (e) => {
   e.preventDefault();
   postMembership();
+  setTimeout(() => {
+    window.location.href = "memberships.html";
+  }, "1000");
 });

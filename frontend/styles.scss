@@ -9,21 +9,27 @@ body {
     button {
       border: none;
       background-color: transparent;
-    }
-
-    #memberships--button {
-      color: rgb(85, 100, 200);
       cursor: pointer;
 
       &:hover {
         color: rgb(57, 70, 154);
       }
     }
+
+    #memberships--button {
+      color: rgb(85, 100, 200);
+      cursor: pointer;
+    }
+
+    #users--button {
+      cursor: pointer;
+      color: rgb(85, 100, 200);
+    }
   }
 
   main {
     padding: 2rem 10rem 1rem 10rem;
-    height: 80vh;
+    height: calc(100vh - 6rem);
     background-color: rgb(192, 212, 234);
 
     @media screen and (max-width: 768px) {
@@ -61,6 +67,18 @@ body {
 
         &:hover {
           background-color: rgb(38, 56, 172);
+        }
+      }
+
+      #button--sort {
+        border: none;
+        background-color: transparent;
+        color: black;
+        margin-left: -4rem;
+        cursor: pointer;
+
+        &:hover {
+          color: rgb(38, 56, 172);
         }
       }
     }

@@ -48,4 +48,7 @@ window.addEventListener("load", getOptions);
 userForm.addEventListener("submit", (e) => {
   e.preventDefault();
   postUser();
+  setTimeout(() => {
+    window.location.href = "users.html";
+  }, "1000");
 });

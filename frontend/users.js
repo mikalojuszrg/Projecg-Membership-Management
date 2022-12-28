@@ -25,9 +25,20 @@ const getUsersDsc = () => {
 
 getUsersAsc();
 
+let isAscending = true;
+
 sortBtn.addEventListener("click", () => {
   cardsSection.innerHTML = "";
-  getUsersDsc();
+
+  if (isAscending) {
+    getUsersDsc();
+    sortBtn.textContent = "Sorting by name - Desc";
+  } else {
+    getUsersAsc();
+    sortBtn.textContent = "Sorting by name - Asc";
+  }
+
+  isAscending = !isAscending;
 });
 
 const renderUserCards = (cards) => {

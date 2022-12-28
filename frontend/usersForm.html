@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script defer src="memberships.js"></script> -->
     <script defer src="usersForm.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -17,13 +16,12 @@
   <body>
     <header>
       <button
-        id="memberships--button"
         onclick="location.href='memberships.html'"
         type="button"
       >
         Memberships
       </button>
-      <button onclick="location.href='users.html'" type="button">Users</button>
+      <button id="users--button" onclick="location.href='users.html'" type="button">Users</button>
     </header>
     <main>
       <section id="memberships--introduction">
@@ -38,29 +36,29 @@
       <section id="users--form">
          <form id="userForm" type="submit">
             <div class="input--div">
-            <label for="firstName">First Name</label>
-            <input name="firstName" id="firstName" type="text" required />
+              <label for="firstName">First Name</label>
+              <input name="firstName" id="firstName" type="text" required />
             </div>
 
             <div class="input--div">
-            <label for="lastName">Last Name</label>
-            <input name="lastName" id="lastName" type="text" required />
+              <label for="lastName">Last Name</label>
+              <input name="lastName" id="lastName" type="text" required />
             </div>
 
             <div class="input--div">
-            <label for="email">Email</label>
-            <input name="email" id="email" type="email" required />
+              <label for="email">Email</label>
+              <input name="email" id="email" type="email" required />
             </div>
 
             <div class="input--div">
-            <label for="membership">Change Membership</label>
-            <select name="membership" id="membership"></select>
+              <label for="membership">Change Membership</label>
+              <select name="membership" id="membership"></select>
             </div>
 
             <div class="button--div">
                 <button id="cancel--button" type="submit">Cancel</button>
                 <button id="create--button" type="submit">New User</button>
-              </div>
+            </div>
     </form>
   
       

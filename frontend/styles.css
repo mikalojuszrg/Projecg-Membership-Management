@@ -10,17 +10,22 @@ body header {
 body header button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+body header button:hover {
+  color: rgb(57, 70, 154);
 }
 body header #memberships--button {
   color: rgb(85, 100, 200);
   cursor: pointer;
 }
-body header #memberships--button:hover {
-  color: rgb(57, 70, 154);
+body header #users--button {
+  cursor: pointer;
+  color: rgb(85, 100, 200);
 }
 body main {
   padding: 2rem 10rem 1rem 10rem;
-  height: 80vh;
+  height: calc(100vh - 6rem);
   background-color: rgb(192, 212, 234);
 }
 @media screen and (max-width: 768px) {
@@ -57,6 +62,16 @@ body main #memberships--introduction button {
 }
 body main #memberships--introduction button:hover {
   background-color: rgb(38, 56, 172);
+}
+body main #memberships--introduction #button--sort {
+  border: none;
+  background-color: transparent;
+  color: black;
+  margin-left: -4rem;
+  cursor: pointer;
+}
+body main #memberships--introduction #button--sort:hover {
+  color: rgb(38, 56, 172);
 }
 body main #memberships--cards {
   display: flex;

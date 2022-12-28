@@ -11,13 +11,12 @@
   <body>
     <header>
       <button
-        id="memberships--button"
         onclick="location.href='memberships.html'"
         type="button"
       >
         Memberships
       </button>
-      <button onclick="location.href='users.html'" type="button">Users</button>
+      <button id="users--button" onclick="location.href='users.html'" type="button">Users</button>
     </header>
     <main>
       <section id="memberships--introduction">
@@ -25,7 +24,7 @@
           <h1 id="memberships--title">User Management</h1>
         </div>
         <div class="section--main">
-          <button id="button--sort">Sorting by name</button>
+          <button id="button--sort">Sorting by name - Asc</button>
         </div>
         <button
           onclick="location.href='usersForm.html'"
@@ -38,21 +37,5 @@
 
       <section id="memberships--cards"></section>
     <footer></footer>
-
-    <!-- <form id="userForm" type="submit">
-      <label for="firstName">First Name</label>
-      <input name="firstName" id="firstName" type="text" required />
-
-      <label for="lastName">Last Name</label>
-      <input name="lastName" id="lastName" type="text" required />
-
-      <label for="email">Email</label>
-      <input name="email" id="email" type="email" required />
-
-      <label for="membership">First Name</label>
-      <select name="membership" id="membership"></select>
-
-      <button type="submit">New User</button>
-    </form> -->
   </body>
 </html>
